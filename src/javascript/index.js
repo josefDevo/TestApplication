@@ -1,5 +1,5 @@
-var name=1;
-var theTitle="online";
+let name = 1;
+var theTitle = "online";
 
 function testDetails() {
     theTitle = document.getElementById("titleInput").value;
@@ -21,10 +21,10 @@ $("body").on('click', '#radioAddQuestion', function () {
 
 });
 
-
 $(".dynamicform").append(createQuestion(name));
-function createQuestion(name){
-    var dynamic=`<span class="module">
+
+function createQuestion(name) {
+    var dynamic = `<span class="module">
                     <legend class="col-form-legend col-sm-10"></legend>
                     <div class="input-group input-group">
                         <label id="wQuestionLabel" class="form-control-label" style="width: 540px;" for="wQuestion">Question:</label>
@@ -49,7 +49,7 @@ function createQuestion(name){
                     <div class="form-group row">
                         <div class="input-group input-group">
                   <span class="input-group-addon">
-                    <input type="radio" name="${theTitle +"rg"+name}" id="${theTitle + "Q" + name + "O" + "1"}" aria-label="">
+                    <input type="radio" value="1"  name="${theTitle + "rb" + name}" id="${theTitle + "Q" + name + "O" + "1"}" aria-label="">
                   </span>
                             <input type="text" id="${theTitle + "Q" + name + "input" + "1"}" class="form-control" aria-label="" style="width: 540px;">
                         </div>
@@ -58,7 +58,7 @@ function createQuestion(name){
                     <div class="form-group row">
                         <div class="input-group input-group">
                   <span class="input-group-addon">
-                    <input type="radio" name="${theTitle +"rg"+name}" id="${theTitle + "Q" + name + "O" + "2"}" aria-label="">
+                    <input type="radio" value="2" name="${theTitle + "rb" + name}" id="${theTitle + "Q" + name + "O" + "2"}" aria-label="">
                   </span>
                             <input type="text" id="${theTitle + "Q" + name + "input" + "2"}" class="form-control" aria-label="" style="width: 540px;">
                         </div>
@@ -67,7 +67,7 @@ function createQuestion(name){
                     <div class="form-group row">
                         <div class="input-group input-group">
                   <span class="input-group-addon">
-                    <input type="radio" name="${theTitle +"rg"+name}" id="${theTitle + "Q" + name + "O" + "3"}" aria-label="">
+                    <input type="radio" value="3" name="${theTitle + "rb" + name}" id="${theTitle + "Q" + name + "O" + "3"}" aria-label="">
                   </span>
                             <input type="text" id="${theTitle + "Q" + name + "input" + "3"}" class="form-control" aria-label="" style="width: 540px;">
                         </div>
@@ -75,7 +75,7 @@ function createQuestion(name){
                     <div class="form-group row">
                         <div class="input-group input-group">
                   <span class="input-group-addon">
-                    <input type="radio" name="${theTitle +"rg"+name}" id="${theTitle + "Q" + name + "O" + "4"}" aria-label="">
+                    <input type="radio" value="4" name="${theTitle + "rb" + name}" id="${theTitle + "Q" + name + "O" + "4"}" aria-label="">
                   </span>
                             <input type="text" id="${theTitle + "Q" + name + "input" + "4"}" class="form-control" aria-label="" style="width: 540px;">
                         </div>
@@ -85,3 +85,30 @@ function createQuestion(name){
     return dynamic;
 
 }
+
+$("#radioSaveTest").click(function () {
+
+    for (let i = 0; i < name.length; i++) {
+
+        let QuestionID = theTitle + 'Q' + [i];
+
+        let RadioBtnName = theTitle + 'rb' + [i];
+
+        console.log(QuestionID);
+        console.log(RadioBtnName);
+
+        for (let j = 0; j < 4; j++) {
+
+            let RadioBtnID = theTitle + "Q" + [i] + "O" + [j];
+
+            let InputTextId = theTitle + "Q" + [i] + "input" + [j];
+            console.log(RadioBtnID);
+            console.log(InputTextId)
+        }
+    }
+});
+
+
+
+// if ($('input[name=gender]:checked').length > 0) {
+//     // do something here
