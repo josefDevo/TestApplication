@@ -1,5 +1,8 @@
-let name = 1;
-var theTitle = "online";
+var name = 1;
+var theTitle = "";
+var test = {
+
+};
 
 function testDetails() {
     theTitle = document.getElementById("titleInput").value;
@@ -8,11 +11,7 @@ function testDetails() {
     $("#removableText").hide();
     $("#singleQuestionModule").show();
     $("#tCreateTest").css('height', '50vh');
-
-    let aQuestion = document.getElementById('addQuestion');
-    if (aQuestion.style.display === 'none') {
-        aQuestion.style.display = 'block';
-    }
+    $(".dynamicform").append(createQuestion(name));
 }
 
 $("body").on('click', '#radioAddQuestion', function () {
@@ -21,10 +20,10 @@ $("body").on('click', '#radioAddQuestion', function () {
 
 });
 
-$(".dynamicform").append(createQuestion(name));
 
-function createQuestion(name) {
-    var dynamic = `<span class="module">
+
+function createQuestion(name){
+    var dynamic=`<span class="module">
                     <legend class="col-form-legend col-sm-10"></legend>
                     <div class="input-group input-group">
                         <label id="wQuestionLabel" class="form-control-label" style="width: 540px;" for="wQuestion">Question:</label>
@@ -86,24 +85,28 @@ function createQuestion(name) {
 
 }
 
-$("#radioSaveTest").click(function () {
+$("#saveTest").click(function () {
 
-    for (let i = 0; i < name.length; i++) {
 
-        let QuestionID = theTitle + 'Q' + [i];
+    for (var i = 1; i <= name; i++) {
+        var questionId  = theTitle + "Q" + name;
 
-        let RadioBtnName = theTitle + 'rb' + [i];
+        //Frågan
+        var question = $("#" + questionId).val();
 
-        console.log(QuestionID);
-        console.log(RadioBtnName);
+        for (var j = 1; j <= 4; j++) {
 
-        for (let j = 0; j < 4; j++) {
+            var radioBtnID = theTitle + "Q" + [i] + "O" + [j];
+            var inputTextId = theTitle + "Q" + [i] + "input" + [j];
 
-            let RadioBtnID = theTitle + "Q" + [i] + "O" + [j];
+            // Svars text
+            var inputText = $("#" + inputTextId).val();
 
-            let InputTextId = theTitle + "Q" + [i] + "input" + [j];
-            console.log(RadioBtnID);
-            console.log(InputTextId)
+            if($("#"+ radioBtnID).is(':checked')) {
+                // Detta svaret är rätt
+                console.log("Rätt svar: " +inputText+ " SvarsId: " + inputTextId);
+            }
+
         }
     }
 });

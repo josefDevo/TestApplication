@@ -71,9 +71,6 @@
   justify-content: space-around;
   display: flex; }
 
-#radioAddQuestion {
-  margin-left: 10px; }
-
 #tShareTest {
   background: url("../../images/girl.jpg") 0 no-repeat fixed;
   width: 100%;
