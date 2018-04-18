@@ -5,9 +5,11 @@ var test = {
 };
 
 function testDetails() {
+
     theTitle = document.getElementById("titleInput").value;
     document.getElementById("testH1").innerHTML = theTitle;
     document.getElementById("titleLabel").innerHTML = "Do you want to change the title?";
+
     $("#removableText").hide();
     $("#singleQuestionModule").show();
     $("#tCreateTest").css('height', '50vh');
@@ -85,25 +87,42 @@ function createQuestion(name){
 
 }
 
+/*
+    This is how I was able to save data from the dynamic input-fields and radio-buttons.
+    I used two for-loops to first get access to the different ids. Then their values are
+    stored im different variables that may be saved into a database:
+
+    The TestID can be of this format "TeachersUser Id + testTitle"
+
+    */
+
+
 $("#saveTest").click(function () {
 
+    // theTitle //need to be saved into the database.
+
+   //  var testID = teacherID = testTitle;
 
     for (var i = 1; i <= name; i++) {
+
+
         var questionId  = theTitle + "Q" + name;
 
-        //Frågan
+        //The Question
         var question = $("#" + questionId).val();
 
         for (var j = 1; j <= 4; j++) {
 
+            // The IDs of the radio-buttons and the inputfields:
             var radioBtnID = theTitle + "Q" + [i] + "O" + [j];
             var inputTextId = theTitle + "Q" + [i] + "input" + [j];
 
-            // Svars text
+            // Text from all the different inputfields
             var inputText = $("#" + inputTextId).val();
 
+            // The right alternative (that is selected with radio-button)
             if($("#"+ radioBtnID).is(':checked')) {
-                // Detta svaret är rätt
+                
                 console.log("Rätt svar: " +inputText+ " SvarsId: " + inputTextId);
             }
 
@@ -112,6 +131,3 @@ $("#saveTest").click(function () {
 });
 
 
-
-// if ($('input[name=gender]:checked').length > 0) {
-//     // do something here
