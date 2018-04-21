@@ -1,3 +1,21 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw; }
+
+#loginView {
+  background: url("../../images/Hongkong.jpg") 50% 0 no-repeat fixed;
+  width: 100vw;
+  height: 100Vh;
+  margin: 0;
+  background-size: cover;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative; }
+
+#chooseLogin {
+  height: 8vh; }
+
 .navbar {
   margin-bottom: 0 !important;
   border-radius: 0 !important;
@@ -19,7 +37,6 @@
 
 #testDetails {
   padding: 100px 0 25px 0;
-  margin-left: 10px;
   /* Mellan rum mellan Create Test och Titeln */
   width: 100%; }
 
@@ -57,14 +74,11 @@
 #testH1 {
   cursor: pointer; }
 
-.row {
-  margin-left: 0; }
-
 #title {
   margin-top: 5%; }
 
-#titleInput, #question1, #question2, #question3, #question4 {
-  min-width: 578px; }
+#titleInput, #userNameInput, #passwordInput {
+  min-width: 616px; }
 
 #submitTitle {
   align-items: center;
@@ -126,12 +140,9 @@
   display: flex;
   background-size: cover; }
 
-#loginView {
-  background: url("../../images/login.jpg");
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  width: 100%; }
+.form-control {
+  justify-content: center;
+  width: 0; }
 
 .form-control-label {
   text-align: left;
@@ -140,27 +151,34 @@
   padding-bottom: 10px; }
 
 .form-check-label {
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
+  font-family: 'Abril Fatface', cursive;
   font-size: 15px;
-  text-align: left;
+  text-align: center;
   color: #000;
   margin: 0;
   padding-bottom: 10px; }
 
-#wQuestionLabel, #titleLabel {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
+.testDetails {
+  justify-content: center !important; }
+
+.wQuestionLabel, #titleLabel, #loginLabel {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 100;
   font-size: 20px; }
 
+#loginLabel {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 100;
+  font-size: 60px; }
+
 #questionOptions {
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 100;
   font-size: 20px; }
 
 h1 {
-  font-family: "Playfair Display $black", serif;
-  font-weight: 900;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 100;
   font-size: 55px;
   text-align: center;
   color: #fff;
@@ -177,8 +195,8 @@ h2 {
   padding: 0; }
 
 h3 {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 100;
   font-size: 16px;
   text-align: center;
   color: #fff;
@@ -189,7 +207,7 @@ h3 {
   margin: 0 auto;
   width: 100%; }
 
-/* CSS for the buttons and the index page... The code is overiding the btn-outline-primary button! */
+/* CSS for the buttons and the index page... The code is overiding the btn-outline-primary button!*/
 .dropdown-menu, .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle, .btn-outline-primary.active .show, .open > .btn-outline-primary.dropdown-toggle:focus, .open > .btn-outline-primary.dropdown-toggle.focus, .btn-outline-primary.dropdown-item {
   color: #32cd32 !important;
   background-color: #000 !important;
@@ -206,10 +224,10 @@ h3 {
   max-width: 100%;
   height: auto; }
 
-/* I am trying to center a div between the navigation bar and div "gitForm, with .flexwrap and .flex-centered */
-/* #headLine is the id of the text that is placed inside the div in index.hbs */
+/* I am trying to center a div between the navigation bar and div "gitForm, with .flexwrap and .flex-centered*/
+/* #headLine is the id of the text that is placed inside the div in index.hbs*/
 #headLine {
-  font-family: "Abril Fatface", cursive;
+  font-family: 'Abril Fatface', cursive;
   background-color: rgba(0, 0, 0, 0.8);
   display: inline-block;
   padding: 1%;
@@ -217,20 +235,18 @@ h3 {
   color: #fff;
   border-radius: 25px; }
 
-/* I am using aligner to center the div in the middle of the screen. */
+/* I am using aligner to center the div in the middle of the screen.*/
 .Aligner {
-  display: flex;
-  align-items: center;
-  min-height: 80vh;
-  justify-content: center; }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
-.Aligner-item {
-  flex: 1; }
-
-/* The at the center is a... */
+/* The at the center is a...*/
 .card {
   background: rgba(0, 0, 0, 0.8) !important;
-  border-radius: 25px !important; }
+  border-radius: 25px !important;
+  width: 69.5vh; }
 
 .card-block {
   -webkit-box-flex: 1;
@@ -250,19 +266,15 @@ h3 {
 .custom-control-description {
   line-height: 2; }
 
-/*  Modified the color of the link at the navigation menu */
+/*  Modified the color of the link at the navigation menu*/
 .nav-link {
   color: #32cd32 !important; }
 
 /* The label under the navigation-menu */
 label {
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 1.1em;
   color: #fff; }
-
-/* When I remove background the icon goes back to that default size */
-.custom-control-input:checked ~ .custom-control-indicator {
-  background-color: #32cd32 !important; }
 
 /* Modifing the positions of the buttons at the Index page */
 #choiceBtn {
@@ -272,9 +284,7 @@ label {
   margin-left: 20%; }
 
 /* BootStrap media querys */
-/*Smal tablets. 768px + */
+/*Smal tablets. 768px +*/
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (1200px and up) */
 /* */
-
-/*# sourceMappingURL=index.css.map */

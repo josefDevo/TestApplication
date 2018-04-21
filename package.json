@@ -3,8 +3,12 @@
   "version": "2.0.0",
   "description": "protestapp",
   "main": "app.js",
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-sass --watch src/styling/sass -o src/styling/css"
   },
   "author": "Josef",
   "license": "ISC",
@@ -15,7 +19,6 @@
     "popper.js": "^1.14.3",
     "vue": "^2.5.16"
   },
-  "devDependencies": {},
   "keywords": [
     "protestapp"
   ]

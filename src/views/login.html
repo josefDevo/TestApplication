@@ -2,67 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-
+    <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Playfair+Display" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
-
+    <link rel="stylesheet" type="text/css" href="../styling/css/index.css">
 </head>
 <body id="loginView">
-
-
-<div id="frontPage">
-    <!-- This is the div that I want to center verically between the navigation bar and the div bellow-->
-    <div id="flexh">
-        <!-- <div class="col-6 .col-md-6">-->
-        <h1 id="headLine">Welcome</h1>
-    </div>
-
-    <div id="gitForm">
-        <div class="Aligner">
-            <div class="container h-100 d-flex justify-content-center">
-                <div class="col-md-6">
-                    <div class=card>
-                        <div class="card-block">
-                            <form class="form-create" action="/" method="post">
-                                <div class="form-group">
-                                    <label id="nameLabel" for="userNameInput">Enter your username</label>
-                                    <input type="text" class="form-control" name="username" id="userNameInput">
-                                </div>
-                                <div class="form-group">
-                                    <label id="gitLabel" for="passwordInput">Enter your password</label>
-                                    <input type="text" class="form-control" name="gitrep" id=passwordInput>
-                                </div>
-                                    <div id="chooseLogin">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-outline-primary
+<div class="Aligner">
+    <div class=card>
+        <div class="card-block">
+            <form class="form-create" action="/" method="post">
+                <div class="form-group">
+                    <label id="loginLabel">Sign in</label>
+                    <hr>
+                    <label id="nameLabel" for="userNameInput">Enter your username</label>
+                    <input required v-model="username" type="text" class="form-control" id="userNameInput"
+                           placeholder="teacher">
+                </div>
+                <div class="form-group">
+                    <label id="gitLabel" for="passwordInput">Enter your password</label>
+                    <input required v-model="password" type="text" class="form-control" id=passwordInput
+                           placeholder="welcome">
+                </div>
+                <div id="chooseLogin">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary
                                                     dropdown-toggle"
-                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                                    id="choiceBtn">
-                                                Login
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <a class="btn btn-outline-primary dropdown-item" id="dropDownTeacher"
-                                                   href="#mavenForm">Teatcher</a>  // Ändra till rätt länk. Vad so, krrävs för att komma in= Rätt (teatv
-                                                <a class="btn btn-outline-primary dropdown-item" id="dropDownStudent"
-                                                   href="#mavenForm">Student</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </form>
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                id="choiceBtn">
+                            Login
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="btn btn-outline-primary dropdown-item" id="dropDownTeacher"
+                               href="#mavenForm">Teatcher</a> //
+                            <a class="btn btn-outline-primary dropdown-item" id="dropDownStudent"
+                               href="#mavenForm">Student</a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+<script src="https://unpkg.com/vue"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
@@ -70,7 +57,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
-<script src="https://unpkg.com/vue"></script>
+<script src="../javascript/main.js"></script>
 <script src="../javascript/index.js"></script>
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i,900" rel="stylesheet">

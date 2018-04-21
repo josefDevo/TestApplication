@@ -8,6 +8,24 @@ $lightGreen: #7F9A29
 $lime: #32cd32
 $mediumGrey: #333333
 
+body
+  margin: 0
+  height: 100vh
+  width: 100vw
+
+#loginView
+  background: url("../../images/Hongkong.jpg") 50% 0 no-repeat fixed
+  width: 100vw
+  height: 100Vh
+  margin: 0
+  background-size: cover
+  justify-content: center !important
+  align-items: center !important
+  position: relative
+
+#chooseLogin
+  height: 8vh
+
 .navbar
   margin-bottom: 0 !important
   border-radius: 0 !important
@@ -29,7 +47,6 @@ $mediumGrey: #333333
 
 #testDetails
   padding: 100px 0 25px 0
-  margin-left: 10px
   /* Mellan rum mellan Create Test och Titeln */
   width: 100%
 
@@ -67,14 +84,11 @@ $mediumGrey: #333333
 #testH1
   cursor: pointer
 
-.row
-  margin-left: 0
-
 #title
   margin-top: 5%
 
-#titleInput, #question1, #question2, #question3, #question4
-  min-width: 578px
+#titleInput, #userNameInput, #passwordInput
+  min-width: 616px
 
 #submitTitle
   align-items: center
@@ -136,44 +150,45 @@ $mediumGrey: #333333
   display: flex
   background-size: cover
 
-#loginView
-  background: url("../../images/login.jpg")
-  height: 100vh
-  margin: 0
-  padding: 0
-  width: 100%
+.form-control
+  justify-content: center
+  width: 0
 
 .form-control-label
-  //font-family: "Playfair Display", serif
-  //font-weight: 400
-  //font-size: 20px
   text-align: left
   color: $black
   margin: 0
   padding-bottom: 10px
 
 .form-check-label
-  font-family: "Playfair Display", serif
-  font-weight: 400
+  font-family: 'Abril Fatface', cursive
   font-size: 15px
-  text-align: left
+  text-align: center
   color: $black
   margin: 0
   padding-bottom: 10px
 
-#wQuestionLabel, #titleLabel
-  font-family: "Playfair Display", serif
-  font-weight: 600
+.testDetails
+  justify-content: center !important
+
+.wQuestionLabel, #titleLabel, #loginLabel
+  font-family: 'Abril Fatface', cursive
+  font-weight: 100
   font-size: 20px
 
+#loginLabel
+  font-family: 'Abril Fatface', cursive
+  font-weight: 100
+  font-size: 60px
+
 #questionOptions
-  font-family: "Playfair Display", serif
-  font-weight: 500
+  font-family: 'Abril Fatface', cursive
+  font-weight: 100
   font-size: 20px
 
 h1
-  font-family: 'Playfair Display $black', serif
-  font-weight: 900
+  font-family: 'Abril Fatface', cursive
+  font-weight: 100
   font-size: 55px
   text-align: center
   color: $white
@@ -190,8 +205,8 @@ h2
   padding: 0
 
 h3
-  font-family: "Playfair Display", serif
-  font-weight: 700
+  font-family: 'Abril Fatface', cursive
+  font-weight: 100
   font-size: 16px
   text-align: center
   color: $white
@@ -232,18 +247,16 @@ h3
 
 /* I am using aligner to center the div in the middle of the screen.*/
 .Aligner
-  display: flex
-  align-items: center
-  min-height: 80vh
-  justify-content: center
-
-.Aligner-item
-  flex: 1
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
 
 /* The at the center is a...*/
 .card
   background: $blackTransparent !important
   border-radius: 25px !important
+  width: 69.5vh
 
 .card-block
   -webkit-box-flex: 1
@@ -251,6 +264,7 @@ h3
   -ms-flex: 1 1 auto
   flex: 1 1 auto
   padding: 1.25rem
+
 
 /* Here is the CSS for the checkbozes that you use to choose what kind of tests that you want to do!  */
 .custom-checkbox .custom-control-indicator
@@ -273,19 +287,12 @@ label
   font-size: 1.1em
   color: $white
 
-/* When I remove background the icon goes back to that default size */
-.custom-control-input:checked ~ .custom-control-indicator
-  background-color: $lime !important
-
 /* Modifing the positions of the buttons at the Index page */
 #choiceBtn
   margin-bottom: 10%
 
 #regret
   margin-left: 20%
-
-
-
 
 /* BootStrap media querys */
 /*Smal tablets. 768px +*/
