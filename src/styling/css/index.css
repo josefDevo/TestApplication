@@ -176,7 +176,7 @@ body {
   font-weight: 100;
   font-size: 20px; }
 
-h1 {
+h1, .h1Mix, .h2Mix, .h3Mix {
   font-family: 'Abril Fatface', cursive;
   font-weight: 100;
   font-size: 55px;
@@ -184,6 +184,9 @@ h1 {
   color: #fff;
   margin: 0;
   padding: 0; }
+
+.h1Mix {
+  mix-blend-mode: difference; }
 
 h2 {
   font-family: "Playfair Display", serif;
@@ -202,6 +205,15 @@ h3 {
   color: #fff;
   margin: 0;
   padding: 0; }
+
+.h1Mix {
+  mix-blend-mode: difference; }
+
+.h2Mix {
+  mix-blend-mode: difference; }
+
+.h3Mix {
+  mix-blend-mode: difference; }
 
 .container {
   margin: 0 auto;
