@@ -207,17 +207,6 @@ h3 {
   margin: 0 auto;
   width: 100%; }
 
-/* CSS for the buttons and the index page... The code is overiding the btn-outline-primary button!*/
-.dropdown-menu, .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle, .btn-outline-primary.active .show, .open > .btn-outline-primary.dropdown-toggle:focus, .open > .btn-outline-primary.dropdown-toggle.focus, .btn-outline-primary.dropdown-item {
-  color: #32cd32 !important;
-  background-color: #000 !important;
-  border-color: #32cd32 !important; }
-
-.dropdown-menu:hover, .btn-outline-primary:hover, .show > .btn-outline-primary.dropdown-toggle, .btn-outline-primary:active:hover, .open > .btn-outline-primary.dropdown-toggle.btn-outline-primary:disabled:hover .btn-outline-primary.dropdown-toggle:hover, .btn-outline-primary.active:hover, .open > .btn-outline-primary.dropdown-toggle:hover {
-  color: #000 !important;
-  background-color: #32cd32 !important;
-  border-color: #000 !important; }
-
 /* To get the images more responsive... At this state, no backgrounds for mobile is included in the project  */
 .img-responsive {
   display: block;
