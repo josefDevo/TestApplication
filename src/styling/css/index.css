@@ -27,7 +27,7 @@ body {
 #navbarBtn {
   margin-right: 0.5rem; }
 
-#teacherMain {
+#teacherMain, #studentMain, #tShareTest, #results, #tDoTest, #tAdmin {
   background: url("../../images/main.jpg") 50% 0 no-repeat fixed;
   width: 100%;
   height: 100Vh;
@@ -46,10 +46,9 @@ body {
   min-width: 600px;
   height: 300px; }
 
-#tCreateTest {
-  background-color: #C5C9B8;
+#tCreateTest, #tGradeTest, #tSettings, #sSettings {
+  background-color: #C5C9B8 !important;
   width: 100%;
-  color: #333333;
   height: 100Vh;
   overflow: hidden;
   align-items: center;
@@ -85,60 +84,23 @@ body {
   justify-content: space-around;
   display: flex; }
 
-#tShareTest {
-  background: url("../../images/girl.jpg") 0 no-repeat fixed;
-  width: 100%;
-  color: #fff;
-  height: 100Vh;
-  margin: 0;
-  align-items: center;
-  justify-content: space-around;
-  display: flex;
-  background-size: cover; }
+#tShareTest, #results {
+  background: url("../../images/girl.jpg") 0 no-repeat fixed; }
 
 #tGradeTest {
-  background-color: #36054D;
-  width: 100%;
-  color: #333333;
-  height: 100Vh;
-  margin: 0 auto;
-  overflow: hidden;
-  align-items: center;
-  justify-content: space-around;
-  display: flex; }
+  background-color: #36054D !important; }
 
 #tDoTest {
-  background: url("../../images/reading.jpg") 0 no-repeat fixed;
-  width: 100%;
-  color: #fff;
-  height: 100Vh;
-  margin: 0;
-  align-items: center;
-  justify-content: space-around;
-  display: flex;
-  background-size: cover; }
+  background: url("../../images/reading.jpg") 0 no-repeat fixed; }
 
 #tSettings {
-  background-color: #7F9A29;
-  width: 100%;
-  color: #333333;
-  height: 100Vh;
-  margin: 0 auto;
-  overflow: hidden;
-  align-items: center;
-  justify-content: space-around;
-  display: flex; }
+  background-color: #7F9A29 !important; }
 
 #tAdmin {
-  background: url("../../images/boy.jpg") 0 no-repeat fixed;
-  width: 100%;
-  color: #fff;
-  height: 100Vh;
-  margin: 0;
-  align-items: center;
-  justify-content: space-around;
-  display: flex;
-  background-size: cover; }
+  background: url("../../images/boy.jpg") 0 no-repeat fixed; }
+
+#sSettings {
+  background-color: #FF1200 !important; }
 
 .form-control {
   justify-content: center;
@@ -176,35 +138,35 @@ body {
   font-weight: 100;
   font-size: 20px; }
 
-h1, .h1Mix, .h2Mix, .h3Mix {
-  font-family: 'Abril Fatface', cursive;
-  font-weight: 100;
-  font-size: 55px;
-  text-align: center;
-  color: #fff;
-  margin: 0;
-  padding: 0; }
+h1, .h1Mix {
+  font-family: 'Abril Fatface', cursive !important;
+  font-weight: 100  !important;
+  font-size: 55px !important;
+  text-align: center !important;
+  color: #fff !important;
+  margin: 0 !important;
+  padding: 0 !important; }
 
 .h1Mix {
-  mix-blend-mode: difference; }
+  mix-blend-mode: difference !important; }
 
-h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-  font-size: 40px;
-  text-align: center;
-  color: #fff;
-  margin: 0;
-  padding: 0; }
+h2, .h2Mix {
+  font-family: "Playfair Display", serif !important;
+  font-weight: 400 !important;
+  font-size: 40px !important;
+  text-align: center !important;
+  color: #fff !important;
+  margin: 0 !important;
+  padding: 0 !important; }
 
-h3 {
-  font-family: 'Abril Fatface', cursive;
-  font-weight: 100;
-  font-size: 16px;
-  text-align: center;
-  color: #fff;
-  margin: 0;
-  padding: 0; }
+h3, .h3Mix {
+  font-family: 'Abril Fatface', cursive !important;
+  font-weight: 100 !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  color: #fff !important;
+  margin: 0 !important;
+  padding: 0 !important; }
 
 .h1Mix {
   mix-blend-mode: difference; }
@@ -218,6 +180,17 @@ h3 {
 .container {
   margin: 0 auto;
   width: 100%; }
+
+#sDoTest {
+  background-color: #e57b11;
+  width: 100%;
+  color: #333333;
+  height: 100Vh;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 0 0 2rem; }
 
 /* To get the images more responsive... At this state, no backgrounds for mobile is included in the project  */
 .img-responsive {

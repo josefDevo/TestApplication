@@ -6,6 +6,8 @@ $darkPurple: #36054D
 $darkGrey: #2c2b2c
 $lightGreen: #7F9A29
 $lime: #32cd32
+$orange: #e57b11
+$red: #FF1200
 $mediumGrey: #333333
 
 body
@@ -45,6 +47,9 @@ body
   padding: 200px 0 260px 0
   background-size: cover
 
+#studentMain
+ @extend #teacherMain
+
 #testDetails
   padding: 100px 0 25px 0
   /* Mellan rum mellan Create Test och Titeln */
@@ -57,9 +62,8 @@ body
   height: 300px
 
 #tCreateTest
-  background-color: $bleakGrey
+  background-color: $bleakGrey !important
   width: 100%
-  color: #333333
   height: 100Vh
   overflow: hidden
   align-items: center
@@ -95,60 +99,29 @@ body
   justify-content: space-around
   display: flex
 
-#tShareTest
+#tShareTest, #results
+  @extend #teacherMain
   background: url("../../images/girl.jpg") 0 no-repeat fixed
-  width: 100%
-  color: $white
-  height: 100Vh
-  margin: 0
-  align-items: center
-  justify-content: space-around
-  display: flex
-  background-size: cover
 
 #tGradeTest
-  background-color: $darkPurple
-  width: 100%
-  color: $mediumGrey
-  height: 100Vh
-  margin: 0 auto
-  overflow: hidden
-  align-items: center
-  justify-content: space-around
-  display: flex
+  @extend #tCreateTest
+  background-color: $darkPurple  !important
 
 #tDoTest
+  @extend #teacherMain
   background: url("../../images/reading.jpg") 0 no-repeat fixed
-  width: 100%
-  color: $white
-  height: 100Vh
-  margin: 0
-  align-items: center
-  justify-content: space-around
-  display: flex
-  background-size: cover
 
 #tSettings
-  background-color: $lightGreen
-  width: 100%
-  color: #333333
-  height: 100Vh
-  margin: 0 auto
-  overflow: hidden
-  align-items: center
-  justify-content: space-around
-  display: flex
+  @extend #tCreateTest
+  background-color: $lightGreen  !important
 
 #tAdmin
+  @extend #teacherMain
   background: url("../../images/boy.jpg") 0 no-repeat fixed
-  width: 100%
-  color: $white
-  height: 100Vh
-  margin: 0
-  align-items: center
-  justify-content: space-around
-  display: flex
-  background-size: cover
+
+#sSettings
+  @extend #tCreateTest
+  background-color: $red  !important
 
 .form-control
   justify-content: center
@@ -187,35 +160,35 @@ body
   font-size: 20px
 
 h1
-  font-family: 'Abril Fatface', cursive
-  font-weight: 100
-  font-size: 55px
-  text-align: center
-  color: $white
-  margin: 0
-  padding: 0
+  font-family: 'Abril Fatface', cursive !important
+  font-weight: 100  !important
+  font-size: 55px !important
+  text-align: center !important
+  color: $white !important
+  margin: 0 !important
+  padding: 0 !important
 
 .h1Mix
   @extend h1
-  mix-blend-mode: difference
+  mix-blend-mode: difference !important
 
 h2
-  font-family: "Playfair Display", serif
-  font-weight: 400
-  font-size: 40px
-  text-align: center
-  color: $white
-  margin: 0
-  padding: 0
+  font-family: "Playfair Display", serif !important
+  font-weight: 400 !important
+  font-size: 40px !important
+  text-align: center !important
+  color: $white !important
+  margin: 0 !important
+  padding: 0 !important
 
 h3
-  font-family: 'Abril Fatface', cursive
-  font-weight: 100
-  font-size: 16px
-  text-align: center
-  color: $white
-  margin: 0
-  padding: 0
+  font-family: 'Abril Fatface', cursive !important
+  font-weight: 100 !important
+  font-size: 16px !important
+  text-align: center !important
+  color: $white !important
+  margin: 0 !important
+  padding: 0 !important
 
 .h1Mix
   @extend h1
@@ -232,6 +205,18 @@ h3
 .container
   margin: 0 auto
   width: 100%
+
+#sDoTest
+  background-color: $orange
+  width: 100%
+  color: #333333
+  height: 100Vh
+  overflow: hidden
+  align-items: center
+  justify-content: center
+  display: flex
+  padding: 0 0 2rem
+
 
 ///* CSS for the buttons and the index page... The code is overiding the btn-outline-primary button!*/
 //.dropdown-menu, .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle, .btn-outline-primary.active .show, .open > .btn-outline-primary.dropdown-toggle:focus, .open > .btn-outline-primary.dropdown-toggle.focus, .btn-outline-primary.dropdown-item

@@ -3,8 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styling/css/index.css">
 </head>
 <body>
 
+<!--This website is a school assignment that is not finished yet.
+    I am happy with the design and I wanted to include a little
+    bit more advanced javascript application
+    than the other frontEnd projects in the portfolio.
+
+    To see some of the functions that is implemented, click on "Create Test".
+    If you enter a "test-title", you will be able to see the ids of
+    the input-fields that are created dynamically in the browser's console.
+
+    The project is made with JavaScript and jQuery
+    Frame Work: Bootstrap 4-->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Student</a>
+    <button class="navbar-toggler" id="navbarBtn" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#studentMain">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sDoTest">Tests to do</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#results">Results</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sSettings">Settings</a>
+            </li>
+        </ul>
+        <button class="btn btn-outline-success" type="button">Logout</button>
+    </div>
+</nav>
+
+<div id="studentMain">
+    <h2>Welcome to the</h2>
+    <h1>PRO Test Application</h1>
+</div>
+
+<div id="sDoTest">
+    <div class="doTestContainer">
+        <h2 class="h2">Here you can</h2>
+        <h1 class="h1">find the Tests</h1>
+    </div>
+</div>
+
+<!--<div id="tCreateTest">-->
+<!--<div class="createTestContainer">-->
+<!--<h2 id="removableText">Create</h2>-->
+<!--<h1 id="testH1">Test</h1>-->
+<!--<div class="d-flex justify-content-center">-->
+<!--<div id="testDetails">-->
+<!--<form class="form-group">-->
+<!--<label id="titleLabel" class="form-control-label" for="titleInput">Enter title:</label>-->
+<!--<input type="text" class="form-control form-control"-->
+<!--placeholder="title" id="titleInput">-->
+<!--</form>-->
+<!--<button class="btn btn-outline-success" id="submitTitle" onclick="testDetails()" type="submit">-->
+<!--Submit-->
+<!--</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+<!--<div id="singleQuestionModule">-->
+<!--<form class="form-group">-->
+<!--<div class="d-flex justify-content-center">-->
+<!--<fieldset class=" form-group row">-->
+<!--<div class="dynamicform">-->
+<!--</div>-->
+<!--<span class="options-label"></span>-->
+<!--<br>-->
+<!--<div class="form-group row">-->
+<!--<div class="btn-group" data-toggle="buttons">-->
+<!--<button type="button" class="btn btn-success" id="radioAddQuestion" @click="counter += 1">Add-->
+<!--Question-->
+<!--</button>-->
+
+<!--<button type="button" class="btn btn-info" id="radioSaveTest" value="saveTest">Save Test-->
+<!--</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</fieldset>-->
+<!--</div>-->
+<!--</form>-->
+<!--</div>-->
+
+<div id="results">
+    <div class="gradeTestContainer">
+        <h2 class="h2Mix">How did</h2>
+        <h1 class="h1Mix">You DO?</h1>
+    </div>
+</div>
+
+<div id="sSettings">
+    <div class="sSettingsContainer">
+        <h2>Change your</h2>
+        <h1>password</h1>
+    </div>
+</div>
+
+
 </body>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script src="../javascript/main.js"></script>
+<script src="../javascript/index.js"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i,900" rel="stylesheet">
+
 </html>
