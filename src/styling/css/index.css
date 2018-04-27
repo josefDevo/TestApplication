@@ -27,7 +27,7 @@ body {
 #navbarBtn {
   margin-right: 0.5rem; }
 
-#teacherMain, #studentMain, #tShareTest, #results, #tDoTest, #tAdmin {
+#teacherMain, #studentMain, #tShareTest, #results, #tDoTest, #tAdmin, #teacherSettings, #studentSettings {
   background: url("../../images/main.jpg") 50% 0 no-repeat fixed;
   width: 100%;
   height: 100Vh;
@@ -67,16 +67,13 @@ body {
   justify-content: space-around;
   float: none; }
 
-#removableText {
-  cursor: pointer; }
-
-#testH1 {
+#removableText, #testH1, #h1ss, #h1ts, #h2ss, #h2ts {
   cursor: pointer; }
 
 #title {
   margin-top: 5%; }
 
-#titleInput, #userNameInput, #passwordInput {
+#titleInput, #userNameInput, #passwordInput, #oldUserName, #newUserName, #oldPassword, #newPassword {
   min-width: 616px; }
 
 #submitTitle {
@@ -98,6 +95,12 @@ body {
 
 #tAdmin {
   background: url("../../images/boy.jpg") 0 no-repeat fixed; }
+
+#teacherSettings {
+  background: url("../../images/teatcher.jpg") 0 no-repeat fixed; }
+
+#studentSettings {
+  background: url("../../images/student.jpg") 0 no-repeat fixed; }
 
 #sSettings {
   background-color: #FF1200 !important; }
@@ -123,12 +126,12 @@ body {
 .testDetails {
   justify-content: center !important; }
 
-.wQuestionLabel, #titleLabel, #loginLabel {
+.wQuestionLabel, #titleLabel {
   font-family: 'Abril Fatface', cursive;
   font-weight: 100;
   font-size: 20px; }
 
-#loginLabel {
+#loginLabel, .userSettingsLabel {
   font-family: 'Abril Fatface', cursive;
   font-weight: 100;
   font-size: 60px; }
@@ -140,7 +143,7 @@ body {
 
 h1, .h1Mix {
   font-family: 'Abril Fatface', cursive !important;
-  font-weight: 100  !important;
+  font-weight: 100 !important;
   font-size: 55px !important;
   text-align: center !important;
   color: #fff !important;
@@ -217,10 +220,16 @@ h3, .h3Mix {
   transform: translate(-50%, -50%); }
 
 /* The at the center is a...*/
-.card {
+.card, .studentCard, .teacherCard {
   background: rgba(0, 0, 0, 0.8) !important;
   border-radius: 25px !important;
-  width: 69.5vh; }
+  width: 69.5vw; }
+
+.studentCard, .teacherCard {
+  width: 20vw; }
+
+#oldUserNameInput, #newUserNameInput, #oldPasswordInput, #newPasswordInput {
+  width: 17vw; }
 
 .card-block {
   -webkit-box-flex: 1;

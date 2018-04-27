@@ -48,7 +48,7 @@ body
   background-size: cover
 
 #studentMain
- @extend #teacherMain
+  @extend #teacherMain
 
 #testDetails
   padding: 100px 0 25px 0
@@ -82,16 +82,14 @@ body
   justify-content: space-around
   float: none
 
-#removableText
+#removableText,#testH1, #h1ss, #h1ts, #h2ss, #h2ts
   cursor: pointer
 
-#testH1
-  cursor: pointer
 
 #title
   margin-top: 5%
 
-#titleInput, #userNameInput, #passwordInput
+#titleInput, #userNameInput, #passwordInput, #oldUserName, #newUserName, #oldPassword, #newPassword
   min-width: 616px
 
 #submitTitle
@@ -105,7 +103,7 @@ body
 
 #tGradeTest
   @extend #tCreateTest
-  background-color: $darkPurple  !important
+  background-color: $darkPurple !important
 
 #tDoTest
   @extend #teacherMain
@@ -113,15 +111,23 @@ body
 
 #tSettings
   @extend #tCreateTest
-  background-color: $lightGreen  !important
+  background-color: $lightGreen !important
 
 #tAdmin
   @extend #teacherMain
   background: url("../../images/boy.jpg") 0 no-repeat fixed
 
+#teacherSettings
+  @extend #teacherMain
+  background: url("../../images/teatcher.jpg") 0 no-repeat fixed
+
+#studentSettings
+  @extend #teacherMain
+  background: url("../../images/student.jpg") 0 no-repeat fixed
+
 #sSettings
   @extend #tCreateTest
-  background-color: $red  !important
+  background-color: $red !important
 
 .form-control
   justify-content: center
@@ -144,12 +150,12 @@ body
 .testDetails
   justify-content: center !important
 
-.wQuestionLabel, #titleLabel, #loginLabel
+.wQuestionLabel, #titleLabel
   font-family: 'Abril Fatface', cursive
   font-weight: 100
   font-size: 20px
 
-#loginLabel
+#loginLabel, .userSettingsLabel
   font-family: 'Abril Fatface', cursive
   font-weight: 100
   font-size: 60px
@@ -161,7 +167,7 @@ body
 
 h1
   font-family: 'Abril Fatface', cursive !important
-  font-weight: 100  !important
+  font-weight: 100 !important
   font-size: 55px !important
   text-align: center !important
   color: $white !important
@@ -217,7 +223,6 @@ h3
   display: flex
   padding: 0 0 2rem
 
-
 ///* CSS for the buttons and the index page... The code is overiding the btn-outline-primary button!*/
 //.dropdown-menu, .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle, .btn-outline-primary.active .show, .open > .btn-outline-primary.dropdown-toggle:focus, .open > .btn-outline-primary.dropdown-toggle.focus, .btn-outline-primary.dropdown-item
 //  color: $lime !important
@@ -257,7 +262,14 @@ h3
 .card
   background: $blackTransparent !important
   border-radius: 25px !important
-  width: 69.5vh
+  width: 69.5vw
+
+.studentCard, .teacherCard
+  @extend .card
+  width: 20vw
+
+#oldUserNameInput, #newUserNameInput, #oldPasswordInput, #newPasswordInput
+  width: 17vw
 
 .card-block
   -webkit-box-flex: 1
@@ -265,7 +277,6 @@ h3
   -ms-flex: 1 1 auto
   flex: 1 1 auto
   padding: 1.25rem
-
 
 /* Here is the CSS for the checkbozes that you use to choose what kind of tests that you want to do!  */
 .custom-checkbox .custom-control-indicator
