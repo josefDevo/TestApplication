@@ -1,6 +1,7 @@
+import axios from 'axios';
 
-Vue.component('theTest',{
-    template:`
+Vue.component('theTest', {
+    template: `
    <span class="module">
                     <legend class="col-form-legend col-sm-10"></legend>
                     <div class="input-group input-group">
@@ -60,4 +61,25 @@ Vue.component('theTest',{
                 </span>      
  
    `,
+
 });
+
+// Can be used to collect data when the database is done.
+// },
+//  export default {
+//     data() {
+//         return {
+//             Test:{},
+//         }
+//     },
+//     mounted() {
+//         axios.get('http://localhost:3000/')
+//             .then((response) => {
+//                 this.Test = response.data;
+//             })
+//
+//             .catch((error) => {
+//                 console.log(error);
+//             })
+//     }
+// });

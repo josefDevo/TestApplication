@@ -13,6 +13,7 @@
   "author": "Josef",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.1.0",
     "express": "^4.16.2",
     "jquery": "^3.0.0",
