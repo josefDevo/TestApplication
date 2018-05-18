@@ -1,3 +1,5 @@
+var teacher ="LoggedInUser";
+
 var name = 1;
 var theTitle = "";
 var test = {
@@ -31,7 +33,7 @@ function createQuestion(name){
                         <div class="input-group input-group">
                          <!-- The Question Inputfield that needs ID-->
                         
-                            <input type="text" class="form-control" aria-label="" id="${theTitle + "Q" + name}" style="width: 578px;">
+                            <input type="text" class="form-control" aria-label="" id="${teacher + theTitle + "Q" + name}" style="width: 578px;">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -46,35 +48,35 @@ function createQuestion(name){
                     <div class="form-group row">
                         <div class="input-group input-group">
                   <span class="input-group-addon">
-                    <input type="radio" value="1"  name="${theTitle + "rb" + name}" id="${theTitle + "Q" + name + "O" + "1"}" aria-label="">
+                    <input type="radio" value="1"  name="${theTitle + "rb" + name}" id="${teacher + theTitle + "Q" + name + "O" + "1"}" aria-label="">
                   </span>
-                            <input type="text" id="${theTitle + "Q" + name + "input" + "1"}" class="form-control" aria-label="" style="width: 578px;">
+                            <input type="text" id="${teacher + theTitle + "Q" + name + "input" + "1"}" class="form-control" aria-label="" style="width: 578px;">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="input-group input-group">
                   <span class="input-group-addon">
-                    <input type="radio" value="2" name="${theTitle + "rb" + name}" id="${theTitle + "Q" + name + "O" + "2"}" aria-label="">
+                    <input type="radio" value="2" name="${theTitle + "rb" + name}" id="${teacher + theTitle + "Q" + name + "O" + "2"}" aria-label="">
                   </span>
-                            <input type="text" id="${theTitle + "Q" + name + "input" + "2"}" class="form-control" aria-label="" style="width: 578px;">
+                            <input type="text" id="${teacher + theTitle + "Q" + name + "input" + "2"}" class="form-control" aria-label="" style="width: 578px;">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="input-group input-group">
                   <span class="input-group-addon">
-                    <input type="radio" value="3" name="${theTitle + "rb" + name}" id="${theTitle + "Q" + name + "O" + "3"}" aria-label="">
+                    <input type="radio" value="3" name="${theTitle + "rb" + name}" id="${teacher + theTitle + "Q" + name + "O" + "3"}" aria-label="">
                   </span>
-                            <input type="text" id="${theTitle + "Q" + name + "input" + "3"}" class="form-control" aria-label="" style="width: 578px;">
+                            <input type="text" id="${teacher + theTitle + "Q" + name + "input" + "3"}" class="form-control" aria-label="" style="width: 578px;">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="input-group input-group">
                   <span class="input-group-addon">
-                    <input type="radio" value="4" name="${theTitle + "rb" + name}" id="${theTitle + "Q" + name + "O" + "4"}" aria-label="">
+                    <input type="radio" value="4" name="${theTitle + "rb" + name}" id="${teacher + theTitle + "Q" + name + "O" + "4"}" aria-label="">
                   </span>
-                            <input type="text" id="${theTitle + "Q" + name + "input" + "4"}" class="form-control" aria-label="" style="width: 578px;">
+                            <input type="text" id="${teacher + theTitle + "Q" + name + "input" + "4"}" class="form-control" aria-label="" style="width: 578px;">
                         </div>
                     </div>
                 </span>
@@ -87,15 +89,15 @@ $("#saveTest").click(function () {
 
 
     for (var i = 1; i <= name; i++) {
-        var questionId  = theTitle + "Q" + name;
+        var questionId  = teacher + theTitle + "Q" + name;
 
         //Frågan
         var question = $("#" + questionId).val();
 
         for (var j = 1; j <= 4; j++) {
 
-            var radioBtnID = theTitle + "Q" + [i] + "O" + [j];
-            var inputTextId = theTitle + "Q" + [i] + "input" + [j];
+            var radioBtnID = teacher + theTitle + "Q" + [i] + "O" + [j];
+            var inputTextId = teacher + theTitle + "Q" + [i] + "input" + [j];
 
             // Svars text
             var inputText = $("#" + inputTextId).val();
