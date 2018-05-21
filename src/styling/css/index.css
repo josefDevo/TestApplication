@@ -97,6 +97,7 @@ body {
   background: url("../../images/boy.jpg") 0 no-repeat fixed; }
 
 #teacherSettings {
+  height: 100vh;
   background: url("../../images/teatcher.jpg") 0 no-repeat fixed; }
 
 #studentSettings {
@@ -134,7 +135,7 @@ body {
 #loginLabel, .userSettingsLabel {
   font-family: 'Abril Fatface', cursive;
   font-weight: 100;
-  font-size: 60px; }
+  font-size: 3vw; }
 
 #questionOptions {
   font-family: 'Abril Fatface', cursive;
@@ -222,11 +223,11 @@ h3, .h3Mix {
 /* The at the center is a...*/
 .card, .studentCard, .teacherCard {
   background: rgba(0, 0, 0, 0.8) !important;
-  border-radius: 25px !important;
-  width: 69.5vw; }
+  border-radius: 25px !important; }
 
 .studentCard, .teacherCard {
-  width: 20vw; }
+  width: 20vw;
+  height: 58vh; }
 
 #oldUserNameInput, #newUserNameInput, #oldPasswordInput, #newPasswordInput {
   width: 17vw; }
